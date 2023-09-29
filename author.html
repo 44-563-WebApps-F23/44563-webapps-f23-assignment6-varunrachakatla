@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSIS 44563 Assignment 06</title>
+</head>
+<body>
+
+<h2>Author entry Varunraj Rachakatla</h2>
+
+<form>
+    <label for="form1_password">The hidden author name</label>
+    <input type ="password" id="form1_password" name="form1_password" min=10 max=50 step=2 value="Dickens"> <br>
+
+    <label for="form1_author">Guess the author</label>
+    <input type ="text" id="form1_author" name="form1_author" autofocus> <br>
+
+    <input type="button" onclick="checkAuthor()" value="Check the guess">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+var good = 0;
+var oops = 0;
+function checkAuthor(){
+    console.log("Getting form values")
+    password = document.getElementById("form1_password").value
+    author = document.getElementById("form1_author").value
+    out = document.getElementById("result")
+    if(password === author){
+        good++;
+        alert("You got it right");
+        out.innerHTML = "The good count is: "+ good;
+    }
+    else{
+        oops++;
+        alert("Sorry");
+        out.innerHTML = "The oops count is: "+ oops;
+    }
+}
+function resolveForm (){
+    console.log("Getting form values")
+    let password = document.getElementById("form1_password").value
+    let author = document.getElementById("form1_author").value
+    if(password === author){
+        good++;
+        alert("You got it right");
+    }
+    else{
+        oops++;
+        alert("“Sorry”");
+    }
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed){
+        out.innerHTML = "Values were confirmed"
+    } else {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+</script>
+
+</body>
+</html> 
