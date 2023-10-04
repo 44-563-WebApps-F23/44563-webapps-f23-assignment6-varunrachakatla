@@ -2,25 +2,50 @@
 <html>
 <head>
     <title>CSIS 44563 Assignment 06</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<h2>Author entry Varunraj Rachakatla</h2>
 
+<div class="container">
+    <h2>Author entry Varunraj Rachakatla</h2>
 <form>
-    <label for="form1_password">The hidden author name</label>
-    <input type ="password" id="form1_password" name="form1_password" min=10 max=50 step=2 value="Dickens"> <br>
 
-    <label for="form1_author">Guess the author</label>
-    <input type ="text" id="form1_author" name="form1_author" autofocus> <br>
+    <div class="form-outline mb-4">
+        <label for="form1_password">The hidden author name</label>
+        <input type="password" id="form1_password" name="form1_password" min=10 max=50 step=2 value="Dickens" class="form-control">
+    </div>
 
-    <input type="button" onclick="oops>6?limitReached():checkAuthor()" value="Check the guess">
+
+    <div class="form-outline mb-4">
+        <label for="form1_author">Guess the author</label>
+        <input type ="text" id="form1_author" name="form1_author" class="form-control" autofocus>
+    </div>
+
+
+    <div class="row mb-4">
+        <p id="result">This text will be replaced </p>
+    </div>
+
+
+    <button type="button" class="btn btn-primary btn-block mb-4" onclick="oops>6?limitReached():checkAuthor()">Check the
+        guess</button>
+
+
+    <div><img id="imageid" onclick="selectImage()" src="./chicago_new (1).jpg" alt="chicago" width="100" height="100" />
+    </div>
 </form>
+</div>
 
 
-<p id="result">This text will be replaced </p>
-
-<div><img id="imageid" onclick="selectImage()" src="./chicago_new (1).jpg" alt="chicago" width="100" height="100"/></div>
 
 <script> 
 var good = 0;

@@ -2,38 +2,72 @@
 <html>
     <head>
         <title>CSIS 44563 Assignment 06 cruise page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+          integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+          integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </head>
 <body>
 
-<h2>Varunraj Rachakatla goes on a cruise</h2>
 
+
+<div class="container">
+    <h2>Varunraj Rachakatla goes on a cruise</h2>
+<div class="row">
+<div>
 <form>
-    <input type="checkbox" id="cb1_cabin" name="cb1"   
-      value="True" checked>
-    <label for="cb1_cabin">Shares Cabin</label></br>
-  
-    <input type="checkbox" id="cb1_breakfast" name="cb2" 
-       value="True">
-    <label for="cb1_breakfast">Breakfast</label></br>
-  
-    <input type="checkbox" id="cb1_pass" name="cb3"   
-       value="False" checked>
-    <label for="cb1_pass">Pool Pass</label></br>
 
-    <input type="button" onclick="selectCruise()" value="Select a cruise ">
-  </form>
+    <div class="form-outline mb-4">
+        <input type="checkbox" id="cb1_cabin" name="cb1"   value="True" checked>
+      <label for="cb1_cabin">Shares Cabin</label>
+    </div>
 
-<p id="result">This text will be replaced </p>
 
-<form>
-    <label for="form1_days">Enter the number of days</label>
-    <input type ="text" id="form1_days" name="form1_days" value="days"> <br>
+    <div class="form-outline mb-4">
+        <input type="checkbox" id="cb1_breakfast" name="cb2" value="True">
+        <label for="cb1_breakfast">Breakfast</label>
+    </div>
 
-    <label for="form1_price">Enter price</label>
-    <input type ="text" id="form1_price" name="form1_price"> <br>
+    <div class="form-outline mb-4">
+        <input type="checkbox" id="cb1_pass" name="cb3" value="False" checked>
+        <label for="cb1_pass">Pool Pass</label>
+    </div>
 
-    <input type="button" onclick="updateCruise()" value="Update the cruise">
+
+    <div class="row mb-4">
+        <p id="result">This text will be replaced </p>
+    </div>
+
+
+    <button type="button" class="btn btn-primary btn-block mb-4" onclick="selectCruise()">Select a cruise </button>
 </form>
+</div>
+<div>
+<form>
+
+    <div class="form-outline mb-4">
+        <label for="form1_days">Enter the number of days</label>
+        <input type="text" id="form1_days" name="form1_days" value="days" class="form-control">
+    </div>
+
+
+    <div class="form-outline mb-4">
+        <label for="form1_price">Enter price</label>
+        <input type="text" id="form1_price" name="form1_price" class="form-control">
+    </div>
+
+
+    <button type="button" class="btn btn-primary btn-block mb-4" onclick="updateCruise()">Update the cruise</button>
+</form>
+</div>
+</div>
+</div>
+
 
 <script> 
 
