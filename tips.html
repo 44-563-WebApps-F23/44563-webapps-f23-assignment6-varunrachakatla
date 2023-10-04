@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSIS 44563 Assignment 06 tips page</title>
+    </head>
+<body>
+
+<h2>Varunraj Rachakatla  shows tip amounts</h2>
+
+<form>
+    <label for="form1_base">Enter base amount </label>
+    <input type ="number" id="form1_base" name="form1_base" value=50> <br>
+
+    <label for="form1_tip">Enter the tip percent </label>
+    <input type ="text" id="form1_tip" name="form1_tip" value=15> <br>
+
+    <input type="button" onclick="tips()" value="Show tip">
+</form>
+
+
+<p id="result"></p>
+
+
+<form>
+    <input type="radio" id="rg1_sum" name="color" value="sum"   
+      checked  onclick="chooseOp()">
+    <label for="rg1_sum">sum</label></br>
+  
+    <input type="radio" id="rg1_diff" name="color" 
+       value="difference" onclick="chooseOp()">
+    <label for="rg1_diff">diff</label></br>
+  
+    <input type="radio" id="rg1_mult" name="color"   
+       value="product" onclick="chooseOp()">
+    <label for="rg1_mult">mult</label></br>
+
+</form>
+
+<p id="radio_result"></p>
+  
+
+
+<script> 
+function tips(){
+    let base = Number(document.getElementById("form1_base").value)
+    let tip = Number(document.getElementById("form1_tip").value)
+    let myOutput = "";
+    for (let index = 0; index < 5; index++){
+       let tipPrecent = 12 + 4*index;
+       console.log(tipPrecent)
+       let calculatedValue = base * (tipPrecent/100);
+       console.log(calculatedValue)
+       myOutput = myOutput + tipPrecent+"% is "+calculatedValue.toFixed()+";";
+    }
+
+    document.getElementById("result").innerHTML = "Tip are:"+ myOutput ;
+}
+
+function  chooseOp(){
+    let base = Number(document.getElementById("form1_base").value)
+    let tip = Number(document.getElementById("form1_tip").value)
+    let sum=document.getElementById("rg1_sum").checked;
+    let diff=document.getElementById("rg1_diff").checked;
+    let mult=document.getElementById("rg1_mult").checked;
+    if(sum){
+        let x=base+tip;
+        document.getElementById("radio_result").innerHTML ="Sum of "+base+" and "+tip+" is "+ x;
+    }
+    else if(diff){
+        let x=base-tip;
+        document.getElementById("radio_result").innerHTML ="Difference of "+base+" and "+tip+" is "+x;
+    }
+    else if(mult){
+        let x = base * tip;
+        document.getElementById("radio_result").innerHTML="Product of "+base+" and "+tip+" is "+x;
+    }
+}
+
+
+</script>
+
+</body>
+</html> 

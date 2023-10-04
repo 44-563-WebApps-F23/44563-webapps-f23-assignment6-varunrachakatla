@@ -41,27 +41,6 @@ function checkAuthor(){
         out.innerHTML = "The oops count is: "+ oops;
     }
 }
-function resolveForm (){
-    console.log("Getting form values")
-    let password = document.getElementById("form1_password").value
-    let author = document.getElementById("form1_author").value
-    if(password === author){
-        good++;
-        alert("You got it right");
-    }
-    else{
-        oops++;
-        alert("“Sorry”");
-    }
-    confirmed = confirm("Are these the values? "+age+" and "+nick)
-    
-    out = document.getElementById("result")
-    if(confirmed){
-        out.innerHTML = "Values were confirmed"
-    } else {
-        out.innerHTML = "Values were not confirmed"
-    }
-}
 </script>
 <script>
     let useImage = 1;
