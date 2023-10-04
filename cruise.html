@@ -43,11 +43,11 @@ function selectCruise(){
     my_cruise = {};
     let shared = document.getElementById("cb1_cabin").checked;
     let breakfast = document.getElementById("cb1_breakfast").checked;
-    let poo = document.getElementById("cb1_pass").checked;
+    let pool = document.getElementById("cb1_pass").checked;
 
     my_cruise.shared =shared;
     my_cruise.breakfast = breakfast;
-    my_cruise.poo = poo;
+    my_cruise.pool = pool;
     out = document.getElementById("result")
     out.innerHTML = JSON.stringify(my_cruise);
 }
