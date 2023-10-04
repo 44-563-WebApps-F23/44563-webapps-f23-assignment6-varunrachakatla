@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSIS 44563 Assignment 06 cruise page</title>
+    </head>
+<body>
+
+<h2>Varunraj Rachakatla goes on a cruise</h2>
+
+<form>
+    <input type="checkbox" id="cb1_cabin" name="cb1"   
+      value="True" checked>
+    <label for="cb1_cabin">Shares Cabin</label></br>
+  
+    <input type="checkbox" id="cb1_breakfast" name="cb2" 
+       value="True">
+    <label for="cb1_breakfast">Breakfast</label></br>
+  
+    <input type="checkbox" id="cb1_pass" name="cb3"   
+       value="False" checked>
+    <label for="cb1_pass">Pool Pass</label></br>
+
+    <input type="button" onclick="selectCruise()" value="Select a cruise ">
+  </form>
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+
+let my_cruise = {};
+
+function selectCruise(){
+    my_cruise = {};
+    let shared = document.getElementById("cb1_cabin").checked;
+    let breakfast = document.getElementById("cb1_breakfast").checked;
+    let poo = document.getElementById("cb1_pass").checked;
+
+    my_cruise.shared =shared;
+    my_cruise.breakfast = breakfast;
+    my_cruise.poo = poo;
+    out = document.getElementById("result")
+    out.innerHTML = JSON.stringify(my_cruise);
+}
+</script>
+
+</body>
+</html> 
