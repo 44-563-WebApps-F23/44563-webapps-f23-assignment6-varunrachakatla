@@ -25,6 +25,16 @@
 
 <p id="result">This text will be replaced </p>
 
+<form>
+    <label for="form1_days">Enter the number of days</label>
+    <input type ="text" id="form1_days" name="form1_days" value="days"> <br>
+
+    <label for="form1_price">Enter price</label>
+    <input type ="text" id="form1_price" name="form1_price"> <br>
+
+    <input type="button" onclick="updateCruise()" value="Update the cruise">
+</form>
+
 <script> 
 
 let my_cruise = {};
@@ -38,6 +48,15 @@ function selectCruise(){
     my_cruise.shared =shared;
     my_cruise.breakfast = breakfast;
     my_cruise.poo = poo;
+    out = document.getElementById("result")
+    out.innerHTML = JSON.stringify(my_cruise);
+}
+
+function updateCruise(){
+    let days = document.getElementById("form1_days").value
+    let price = document.getElementById("form1_price").value
+    my_cruise['price'] = days;
+    my_cruise['days'] = price;
     out = document.getElementById("result")
     out.innerHTML = JSON.stringify(my_cruise);
 }
