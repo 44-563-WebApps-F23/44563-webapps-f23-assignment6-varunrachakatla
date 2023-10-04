@@ -14,7 +14,7 @@
     <label for="form1_author">Guess the author</label>
     <input type ="text" id="form1_author" name="form1_author" autofocus> <br>
 
-    <input type="button" onclick="checkAuthor()" value="Check the guess">
+    <input type="button" onclick="oops>6?limitReached():checkAuthor()" value="Check the guess">
 </form>
 
 
@@ -26,7 +26,6 @@
 var good = 0;
 var oops = 0;
 function checkAuthor(){
-    console.log("Getting form values")
     password = document.getElementById("form1_password").value
     author = document.getElementById("form1_author").value
     out = document.getElementById("result")
@@ -40,6 +39,9 @@ function checkAuthor(){
         alert("Sorry");
         out.innerHTML = "The oops count is: "+ oops;
     }
+}
+function limitReached(){
+    alert("Sorry, ran out of guesses.");
 }
 </script>
 <script>
